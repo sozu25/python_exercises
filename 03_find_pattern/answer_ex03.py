@@ -4,13 +4,14 @@ import re
 
 
 def main(file_path):
-    pattern = re.compile("##.*")
+    pattern = re.compile("File*")
     matched = []
     with open(file_path, "r", encoding="utf-8") as f:
-        for line in f:
+        for i, line in enumerate(f):
             m = pattern.match(line.strip())
             if m:
                 matched.append(m.group(0))
+                print(i)
     
     print(matched)
 
