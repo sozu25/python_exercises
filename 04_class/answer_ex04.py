@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 import unittest
 
+def main():
+    bot = Bot("Angy")
+    print(bot.reply("Hi, I'm Angy."))
 
 class Bot():
 
-    def __init__(self, owner_name):
+    def __init__(self, name):
         self.owner_name = name
 
     def reply(self, call):
@@ -23,4 +26,5 @@ class TestBot(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    #unittest.main()
+    main()
